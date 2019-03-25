@@ -69,7 +69,7 @@ def intensity_transformation(image_path, itf_path):
     new_image = Image.merge('RGB',
                             (Image.fromarray(new_base[0]).convert('L'), Image.fromarray(new_base[0]).convert('L'),
                              Image.fromarray(new_base[0]).convert('L')))
-
+    new_image.save('output/{}'.format('modifyed_'+itf_path.split('/')[-1].split('.')[0]+'_'+image_path.split('/')[-1]))
     new_image.show()
 
 
